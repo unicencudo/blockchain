@@ -2,7 +2,7 @@
 var cDataJson = '../contracts/build/contracts/SILS.json';
 var data = require(cDataJson);
 const web3URL = 'http://localhost:7545';
-const contractAddress = '0x1e8171208B1a91c9D44786e6fbB5fBad00049a1f';
+const contractAddress = '0xEB99a0E809B9EB489e346A155700112A2f7A4575';
 
 var express = require('express');
 var router = express.Router();

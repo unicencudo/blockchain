@@ -58,7 +58,7 @@ contract SILS {
         if (amt >= minBalance){
             return errMsg[2];
         }
-        else if (amt <= minAmt){
+        else if (amt < minAmt){
             return errMsg[3];
         }
         //uint256 minBalance= sender.balance;
