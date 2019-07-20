@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b114c1b8-5824-4f8a-a8f6-78b292820318" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/contracts/build/contracts/Migrations.json" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/build/contracts/Migrations.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/build/contracts/SILS.json" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/build/contracts/SILS.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/build/contracts/SafeMath.json" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/build/contracts/SafeMath.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/contracts/SILS.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/contracts/SILS.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/Funding.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/Funding.js" afterDir="false" />
-    </list>
+    <list default="true" id="b114c1b8-5824-4f8a-a8f6-78b292820318" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -64,10 +58,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/contracts/contracts/SILS.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
+            <state relative-caret-position="-408">
               <caret line="60" column="22" lean-forward="true" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
             </state>
           </provider>
@@ -82,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/Funding.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="67" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
+            <state relative-caret-position="136">
+              <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -139,8 +133,8 @@
       <find>deposit_fund</find>
       <find>depositRule</find>
       <find>selUsrAcct</find>
-      <find>check_deposit</find>
       <find>checkDepositEvent</find>
+      <find>check_deposit</find>
     </findStrings>
     <replaceStrings>
       <replace>$optUsrAcct</replace>
@@ -331,12 +325,12 @@
       <workItem from="1563347441419" duration="6762000" />
       <workItem from="1563515231224" duration="20000" />
       <workItem from="1563517245217" duration="24797000" />
-      <workItem from="1563600236401" duration="21049000" />
+      <workItem from="1563600236401" duration="22045000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194916000" />
+    <option name="totallyTimeSpent" value="195912000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -357,7 +351,7 @@
       <window_info id="npm" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3285968" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.42451155" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42451155" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.23268206" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -366,7 +360,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.38898757" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.38898757" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -636,6 +630,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/Funding.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/contracts/contracts/SafeMath.sol">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
@@ -645,15 +646,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/contracts/contracts/SILS.sol">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
+        <state relative-caret-position="-408">
           <caret line="60" column="22" lean-forward="true" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/Funding.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="67" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
         </state>
       </provider>
     </entry>
