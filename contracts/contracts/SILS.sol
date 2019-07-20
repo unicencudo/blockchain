@@ -88,7 +88,7 @@ contract SILS {
         //for payable function, the require validation takes effect after amount is offset from the sender account,
         //therefore the require validation has to add (SafeMath.add) the offset balance + amount sent
         require(SafeMath.mul(SafeMath.div(SafeMath.add(msg.sender.balance,msg.value),uint256(5)),uint256(4))> msg.value,  errMsg[2]);
-        require(msg.value> minAmt, errMsg[3]);
+        require(msg.value>= minAmt, errMsg[3]);
 
         sba.transfer(msg.value);
 

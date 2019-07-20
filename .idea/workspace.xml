@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b114c1b8-5824-4f8a-a8f6-78b292820318" name="Default Changelist" comment="" />
+    <list default="true" id="b114c1b8-5824-4f8a-a8f6-78b292820318" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/SILS.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/contracts/SILS.sol" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -61,8 +64,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/contracts/contracts/SILS.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="111" column="1" lean-forward="true" selection-start-line="111" selection-start-column="1" selection-end-line="111" selection-end-column="1" />
+            <state relative-caret-position="50">
+              <caret line="90" column="27" selection-start-line="90" selection-start-column="27" selection-end-line="90" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -140,6 +143,9 @@
       <replace>$optUsrAcct</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -169,8 +175,8 @@
         <option value="$PROJECT_DIR$/routes/LoanRequest.js" />
         <option value="$PROJECT_DIR$/contracts/migrations/2_deploy_contracts.js" />
         <option value="$PROJECT_DIR$/views/Funding.ejs" />
-        <option value="$PROJECT_DIR$/contracts/contracts/SILS.sol" />
         <option value="$PROJECT_DIR$/routes/Funding.js" />
+        <option value="$PROJECT_DIR$/contracts/contracts/SILS.sol" />
       </list>
     </option>
   </component>
@@ -180,6 +186,7 @@
     <option name="width" value="1890" />
     <option name="height" value="960" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -245,6 +252,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.15.3" />
@@ -320,12 +328,12 @@
       <workItem from="1563347441419" duration="6762000" />
       <workItem from="1563515231224" duration="20000" />
       <workItem from="1563517245217" duration="24797000" />
-      <workItem from="1563600236401" duration="20094000" />
+      <workItem from="1563600236401" duration="20790000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193961000" />
+    <option name="totallyTimeSpent" value="194657000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -641,8 +649,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/contracts/contracts/SILS.sol">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="111" column="1" lean-forward="true" selection-start-line="111" selection-start-column="1" selection-end-line="111" selection-end-column="1" />
+        <state relative-caret-position="50">
+          <caret line="90" column="27" selection-start-line="90" selection-start-column="27" selection-end-line="90" selection-end-column="27" />
         </state>
       </provider>
     </entry>
