@@ -1,0 +1,48 @@
+body {
+    background-color:#F0F0F0;
+    padding: 2em;
+    font-family: 'Raleway','Source Sans Pro', 'Arial';
+}
+.container {
+    width: 90%; 
+    margin: 0 auto;
+}
+label {
+    display:block;
+    margin-bottom:10px;
+}
+input {
+    padding:10px;
+ /*   width: 50%;*/ 
+    margin-bottom: 1em;
+}
+button {
+    margin: 2em 0;
+    padding: 1em 4em;
+    display:block;
+}
+
+#SBAPOOL {
+    padding:1em;
+    background-color:#fff;
+    margin: 1em 0;
+    margin-right: 120px;
+}
+
+.bg { 
+  /* The image used */
+  background-image: url("wallpaper.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: right bottom; /*Positioning*/
+  background-repeat: no-repeat; /*Prevent showing multiple background images*/
+  background-size: cover;
+}
+
+#loader {
+    width: 100px;
+    display:none;
+}

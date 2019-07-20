@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[SILS] Borrower - Loan Term Acceptance/Rejection </title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+</head>
+<style>
+    body {
+        background-size: 600px 700px;
+        background-image: url("images/wallpaper1.png");
+        background-repeat: no-repeat;
+        background-position: right top;
+        margin-right: 200px;
+    }
+</style>
+<body>
+<div class="container">
+    <h1>Smart Integrated Lending System (SAILS)</h1>
+
+    <form method="POST" action="/LoanTermAcceptance">
+    <input id="pgLoanRequest" name="selPage" type="radio" onclick="javascript:window.location.replace('/LoanRequest');">&nbsp;Loan Request
+    <br/>
+    <input id="pgLoanTerm" name="selPage" type="radio" checked>&nbsp;Loan Term Acceptance/Rejection
+
+    <label for="name" class="col-lg-2 control-label">User Account</label>
+    <select id="selUsrAcct" name="role"></select>
+
+    <br/><br/><hr align="left" style="width:60%; border-width:5px;"/><br/>
+
+    <label for="name" class="col-lg-2 control-label">Purpose</label>
+    <textarea id="txtPurpose" rows="5" cols="50" name="txtPurpose" disabled></textarea>
+    
+    <label class="col-lg-2 control-label" for="name">Amount (Ether)</label>
+    <input id="txtAmount" type="text" name="txtAmount" disabled>
+        
+    <label class="col-lg-2 control-label" for="name">Tenure (Days)</label>
+    <input id="txtTenure" type="text" name="txtTenure" disabled>
+
+    <br/><br/><hr align="left" style="width:45%; border-color:cyan; background:cyan;"/><br/>
+        
+    <label class="col-lg-2 control-label" for="name">Repayment</label>
+    <div id="txtRepayment" />
+        
+    <label class="col-lg-2 control-label" for="name">Term</label>
+    <div id="txtRepayment" />
+
+    <br/>
+    <img id="loader" src="/images/lg.double-ring-spinner.gif">
+    <br/>
+    <input type="hidden" id="inResp" value="Accept">
+    <input type="submit" id="btnReject" value="Reject" onclick="javascript:document.getElementById('inResp').value='Reject';">&nbsp;&nbsp;&nbsp;
+    <input type="submit" id="btnAccept" value="Accept">
+
+    </form>
+
+</div>
+
+</body>
+
+</html>

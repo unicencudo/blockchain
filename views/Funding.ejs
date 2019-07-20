@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[SILS] Lender - Funding </title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+</head>
+<style>
+    body {
+        background-size: 600px 700px;
+        background-image: url("/images/wallpaper1.png");
+        background-repeat: no-repeat;
+        background-position: right top;
+        margin-right: 200px;
+    }
+</style>
+<body>
+<div class="container">
+    <h1>Smart Integrated Lending System (SAILS)</h1>
+
+    <form method="POST">
+    <input type="hidden" id="hidSBAAcct" value="<%=SBA_Acct%>">
+
+    <label for="name" class="col-lg-2 control-label">User Account</label>
+    <select id="selUsrAcct" name="selUsrAcct" >
+    </select>
+
+    <br/><br/><hr align="left" style="width:60%; border-width:5px;"/><br/>
+
+    <label class="col-lg-2 control-label" for="name">Amount (Ether)</label>
+    <input id="txtAmount" type="text" name="txtAmount" value="<%=amount%>"
+        onchange="javascript:if(isNaN(this.value)){alert('Input must be numeric'); this.value=''};">
+
+    <br/>
+    <img id="loader" src="/images/lg.double-ring-spinner.gif">
+    <br/>
+    <input type="submit" id="btnFunding" value="Funding" onclick="javascript: if(!fnValidateInput()) return false;">
+    <br/>
+    <div id="lblMsg" name="lblMsg" style="color: red"></div>
+
+    </form>
+
+</div>
+
+<script src="/jquery-3.2.1.slim.min.js"></script>
+
+<script>
+    var $mySelect = $('#selUsrAcct');
+    var $option;
+
+    var strAllAddr = "<%=arrAllAddr%>";
+    var arrAllAddr = strAllAddr.split(",");
+
+    $mySelect.empty();
+    $.each(arrAllAddr, function(key, value) {
+        $option = $("<option/>", {
+            value: value,
+            text: value
+        });
+        $mySelect.append($option);
+    });
+
+    var $lblMsg = $('#lblMsg');
+    $lblMsg.html("<%-lblMsg%>");
+
+    function fnValidateInput(){
+        var $txtAmount = $('#txtAmount');
+
+        if ($txtAmount.val().trim() == ""){
+            alert("Please input all required fields!");
+            return false;
+        }
+        return true;
+    }
+
+</script>
+
+
+
+</body>
+
+</html>

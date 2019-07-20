@@ -1,0 +1,88 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+
+    <script src="./node_modules/web3/dist/web3.min.js"></script>
+
+</head>
+<style>
+    body {
+        background-size: 600px 700px;
+        background-image: url("images/wallpaper1.png");
+        background-repeat: no-repeat;
+        background-position: right top;
+        margin-right: 200px;
+    }
+</style>
+<body>
+<div class="container">
+
+    <h1>Smart Integrated Lending System</h1>
+    <h1>(SAILS)</h1>
+
+    <h2 id="SBAPOOL"></h2>
+
+    <img id="loader" src="https://loading.io/spinners/double-ring/lg.double-ring-spinner.gif">
+
+    <label for="name" class="col-lg-2 control-label">Investor Name</label>
+    <input id="name" type="text">
+
+    <label for="name" class="col-lg-2 control-label">Investor ID</label>
+    <input id="id" type="text">
+
+    <label for="name" class="col-lg-2 control-label">Amount</label>
+    <input id="amount" type="text">
+
+    <button id="button">Submit</button>
+
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+<script>
+    if (typeof web3 !== 'undefined') {
+        web3 = new Web3(web3.currentProvider);
+    } else {
+        // set the provider you want from Web3.providers
+        web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+    }
+
+    web3.eth.defaultAccount = web3.eth.accounts[0];
+
+    //ABI
+    var SBAcontract = web3.eth.contract([{"constant":false,"inputs":[{"name":"_fName","type":"string"},{"name":"_fund","type":"uint256"}],"name":"InvestFund","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getInvestor","outputs":[{"name":"","type":"string"},{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"anonymous":false,"inputs":[{"indexed":false,"name":"name","type":"string"},{"indexed":false,"name":"fund","type":"uint256"},{"indexed":false,"name":"pool_amount","type":"uint256"}],"name":"Investor","type":"event"}]);
+
+    var SBA = SBAcontract.at('0x161d721311e641a0199c018d4198cdac61760492');
+    console.log(SBA);
+
+    var investorEvent = SBA.investorInfo();
+    console.log(investorEvent);
+    investorEvent.watch(function(error, result){
+        if (!error)
+        {
+            console.log("hello");
+            $("#loader").hide();
+            $("#SBAPOOL").html('$'+result.args.pool_amount);//(result.args.fName + ' (' + result.args.fund +')');
+        } else {
+            $("#loader").hide();
+            console.log(error);
+        }
+    });
+
+    $("#button").click(function() {
+        SBA.InvestFund($("#name").val(), $("#amount").val());
+        $("#loader").show();
+    });
+
+</script>
+</body>
+
+</html>-->

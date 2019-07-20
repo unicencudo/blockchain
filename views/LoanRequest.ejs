@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[SILS] Borrower - Loan Request </title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+</head>
+<style>
+    body {
+        background-size: 600px 700px;
+        background-image: url("images/wallpaper1.png");
+        background-repeat: no-repeat;
+        background-position: right top;
+        margin-right: 200px;
+    }
+</style>
+<body>
+<div class="container">
+    <h1>Smart Integrated Lending System (SAILS)</h1>
+
+<!--    <form method="POST" action="/LoadRequest">-->
+    <form method="POST">
+    <input type="hidden" id="hidSBAAcct" value="<%=SBA_Acct%>">
+
+    <input id="pgLoanRequest" name="selPage" type="radio" checked>&nbsp;Loan Request
+    <br/>
+    <input id="pgLoanTerm" name="selPage" type="radio" onclick="javascript:window.location.replace('/LoanTermAcceptance');">&nbspLoan Term Acceptance/Rejection
+
+    <label for="name" class="col-lg-2 control-label">User Account</label>
+    <select id="selUsrAcct" name="selUsrAcct" >
+    </select>
+
+    <br/><br/><hr align="left" style="width:60%; border-width:5px;"/><br/>
+
+    <label for="name" class="col-lg-2 control-label">Purpose</label>
+    <textarea id="txtPurpose" rows="5" cols="50" name="txtPurpose"></textarea>
+    
+    <label class="col-lg-2 control-label" for="name">Amount (Ether)</label>
+    <input id="txtAmount" type="text" name="txtAmount"
+        onchange="javascript:if(isNaN(this.value)){alert('Input must be numeric'); this.value=''};">
+        
+    <label class="col-lg-2 control-label" for="name">Tenure (Days)</label>
+    <input id="txtTenure" type="text" name="txtTenure"
+        onchange="javascript:if(isNaN(this.value)){alert('Input must be numeric'); this.value=''};">
+    <br/>
+    <img id="loader" src="/images/lg.double-ring-spinner.gif">
+
+    <br/>
+    <input type="submit" value="Request" onclick="javascript: if(!fnValidateInput()) return false;">
+    <br/>
+    <div id="lblMsg" name="lblMsg" style="color: red"></div>
+
+    </form>
+
+</div>
+
+<!--<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/truffle-contract@4.0.23/dist/truffle-contract.js"></script>-->
+
+<script src="/jquery-3.2.1.slim.min.js"></script>
+
+<script>
+    var $mySelect = $('#selUsrAcct');
+    var $option;
+
+    var strAllAddr = "<%=arrAllAddr%>";
+    var arrAllAddr = strAllAddr.split(",");
+
+    $mySelect.empty();
+    $.each(arrAllAddr, function(key, value) {
+        $option = $("<option/>", {
+            value: value,
+            text: value
+        });
+        $mySelect.append($option);
+    });
+
+    var $lblMsg = $('#lblMsg');
+    $lblMsg.html("<%-lblMsg%>");
+
+    function fnValidateInput(){
+        var $txtPurpose = $('#txtPurpose');
+        var $txtAmount = $('#txtAmount');
+        var $txtTenure = $('#txtTenure');
+
+        if (($txtPurpose.val().trim() == "") || ($txtAmount.val().trim() == "") || ($txtTenure.val().trim() == "")){
+            alert("Please input all required fields!");
+            return false;
+        }
+        return true;
+    }
+
+</script>
+
+
+</body>
+
+</html>
