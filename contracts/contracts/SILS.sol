@@ -87,12 +87,13 @@ contract SILS {
 
         //for payable function, the require validation takes effect after amount is offset from the sender account,
         //therefore the require validation has to add (SafeMath.add) the offset balance + amount sent
+        //transaction will be reverted should any of the requires failed
         require(SafeMath.mul(SafeMath.div(SafeMath.add(msg.sender.balance,msg.value),uint256(5)),uint256(4))> msg.value,  errMsg[2]);
         require(msg.value>= minAmt, errMsg[3]);
 
         sba.transfer(msg.value);
 
-        emit depositEvent(address(this),address(this).balance);
+        emit depositEvent(sba,sba.balance);
     }
 
 
@@ -105,7 +106,7 @@ contract SILS {
     }
 
     function getBalance() public view returns(uint amt){
-        return address(this).balance;
+        return sba.balance;
     }
 
 
