@@ -15,7 +15,7 @@
     "http-errors": "~1.6.3",
     "jquery": "^3.4.1",
     "jsdom": "^15.1.1",
-    "lodash": "^4.17.14",
+    "lodash": "^4.17.21",
     "morgan": "~1.9.1",
     "truffle": "^5.0.27",
     "truffle-contract": "^4.0.24",
